@@ -32,12 +32,12 @@ export class MoviesService {
 
   patchMovie(id: number, updateData) {
     const movie = this.getMovie(id);
-    
-    this.deleteMovie(id)
-    this.movies.push({...movie, ...updateData})
+
+    this.deleteMovie(id);
+    this.movies.push({ ...movie, ...updateData });
     return {
-        updatedMovie: id,
-        ...updateData,
-      }
+      updatedMovie: id,
+      ...updateData,
+    };
   }
 }
